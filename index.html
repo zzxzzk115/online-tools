@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="pageTitle">在线工具集</title>
+  <meta id="metaDescription" name="description" content="前端在线工具集主页">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <main class="container py-5">
+    <header class="mb-4">
+      <h1 id="homeTitle" class="display-6 fw-bold">在线工具集</h1>
+    </header>
+
+    <section>
+      <h2 id="toolsHeading" class="h4 mb-3">可用工具</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm tool-card">
+            <div class="card-body d-flex flex-column">
+              <h3 id="metricsToolTitle" class="h5 card-title">SSIM / PSNR / MSE 计算器</h3>
+              <p id="metricsToolDesc" class="card-text text-secondary flex-grow-1">上传 Ground Truth 图片后，批量上传待评估图像，自动计算并展示图像质量指标。</p>
+              <a id="metricsToolLink" class="btn btn-primary mt-2" href="tools/image-metrics/">进入工具</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/home-i18n.js"></script>
+</body>
+</html>
