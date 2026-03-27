@@ -7,7 +7,10 @@
       toolsHeading: '可用工具',
       metricsToolTitle: 'SSIM / PSNR / MSE 计算器',
       metricsToolDesc: '上传 Ground Truth 图片后，批量上传待评估图像，自动计算并展示图像质量指标。',
-      metricsToolLink: '进入工具'
+      metricsToolLink: '进入工具',
+      absToolTitle: 'Abs Error Map / Heatmap 生成器',
+      absToolDesc: '上传 Ground Truth 与目标图像，生成绝对误差图与热力图，可用于图形学误差分析。',
+      absToolLink: '进入工具'
     },
     en: {
       pageTitle: 'Online Tools',
@@ -16,7 +19,10 @@
       toolsHeading: 'Available Tools',
       metricsToolTitle: 'SSIM / PSNR / MSE Calculator',
       metricsToolDesc: 'Upload a ground truth image, then batch upload target images to evaluate quality metrics.',
-      metricsToolLink: 'Open Tool'
+      metricsToolLink: 'Open Tool',
+      absToolTitle: 'Abs Error Map / Heatmap Generator',
+      absToolDesc: 'Upload a ground truth image and target images to generate abs error maps and heatmaps for graphics analysis.',
+      absToolLink: 'Open Tool'
     }
   };
 
@@ -36,7 +42,10 @@
     'toolsHeading',
     'metricsToolTitle',
     'metricsToolDesc',
-    'metricsToolLink'
+    'metricsToolLink',
+    'absToolTitle',
+    'absToolDesc',
+    'absToolLink'
   ];
 
   for (const key of textKeys) {

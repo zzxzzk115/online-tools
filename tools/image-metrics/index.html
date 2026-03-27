@@ -18,6 +18,13 @@
 
     <section class="card shadow-sm mb-4">
       <div class="card-body">
+        <h2 id="infoTitle" class="h5 mb-3">指标说明</h2>
+        <blockquote id="conceptInfo" class="concept-note mb-0">Loading metric guide...</blockquote>
+      </div>
+    </section>
+
+    <section class="card shadow-sm mb-4">
+      <div class="card-body">
         <div class="row g-3">
           <div class="col-12 col-md-6">
             <label id="gtLabel" for="groundTruthInput" class="form-label fw-semibold">Ground Truth 图像</label>
@@ -86,7 +93,9 @@
     </section>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
   <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/image-metrics-concept.js"></script>
   <script src="../../assets/js/image-metrics.js"></script>
 </body>
 </html>
