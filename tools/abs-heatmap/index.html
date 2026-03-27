@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abs Error Map / Heatmap</title>
+  <meta id="metaDescription" name="description" content="Abs error map and heatmap generator">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+  <main class="container py-4 py-md-5">
+    <header class="mb-4">
+      <a id="backLink" href="../../" class="btn btn-link px-0 text-decoration-none">&larr; 返回工具集</a>
+      <h1 id="pageHeading" class="h2 fw-bold mt-1">Abs Error Map / Heatmap</h1>
+      <p id="pageSubheading" class="text-secondary mb-0">上传 Ground Truth 与目标图像，生成绝对误差图和热力图。</p>
+    </header>
+
+    <section class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h2 id="infoTitle" class="h5 mb-3">概念说明</h2>
+        <blockquote id="conceptInfo" class="concept-note mb-0"></blockquote>
+      </div>
+    </section>
+
+    <section class="card shadow-sm mb-4">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label id="gtLabel" for="groundTruthInput" class="form-label fw-semibold">Ground Truth 图像</label>
+            <input id="groundTruthInput" class="form-control" type="file" accept="image/*">
+            <div id="gtHelp" class="form-text">仅支持一张，作为对比基准。</div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label id="targetsLabel" for="targetsInput" class="form-label fw-semibold">待比较图像</label>
+            <input id="targetsInput" class="form-control" type="file" accept="image/*" multiple>
+            <div id="targetsHelp" class="form-text">支持多张，按顺序生成结果。</div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <button id="generateBtn" class="btn btn-primary" type="button">生成</button>
+          <button id="clearBtn" class="btn btn-outline-secondary" type="button">清空</button>
+        </div>
+
+        <div id="alertBox" class="alert alert-warning mt-3 d-none" role="alert"></div>
+      </div>
+    </section>
+
+    <section class="row g-3 mb-4">
+      <div class="col-12 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 id="gtPreviewTitle" class="h6 fw-semibold">Ground Truth 预览</h2>
+            <div id="gtPreview" class="mt-2 text-secondary small">尚未上传</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 id="targetsCountTitle" class="h6 fw-semibold">待比较图像数量</h2>
+            <p id="targetsCount" class="display-6 fw-bold mb-0">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card shadow-sm">
+      <div class="card-body">
+        <h2 id="resultsTitle" class="h5">生成结果</h2>
+        <div id="resultList" class="mt-3">
+          <p id="emptyHint" class="text-secondary mb-0">暂无结果</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/abs-heatmap.js"></script>
+</body>
+</html>
