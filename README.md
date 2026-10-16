@@ -2,6 +2,12 @@
 
 基于纯 `HTML + CSS + JavaScript` 的前端工具集，适合直接部署到 GitHub Pages。
 
+## 预览
+
+![本地运行的图像指标工具：批量评估三张自制测试图像。](docs/images/showcase.webp)
+
+本地运行的图像指标工具：批量评估三张自制测试图像。 [运行与截图说明](docs/showcase.md).
+
 ## 已实现工具
 
 - `SSIM / PSNR / MSE` 计算器：上传一张 Ground Truth 图像，再批量上传待评估图像进行指标计算。
