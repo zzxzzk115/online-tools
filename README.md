@@ -2,6 +2,12 @@
 
 基于纯 `HTML + CSS + JavaScript` 的前端工具集，适合直接部署到 GitHub Pages。
 
+## 预览
+
+![批量计算图像的 MSE、PSNR 和 SSIM。](docs/images/showcase.webp)
+
+批量计算图像的 MSE、PSNR 和 SSIM。
+
 ## 已实现工具
 
 - `SSIM / PSNR / MSE` 计算器：上传一张 Ground Truth 图像，再批量上传待评估图像进行指标计算。
@@ -26,3 +32,9 @@
 ## 自动部署
 
 已配置 GitHub Actions：当你推送到 `main` 或 `master` 分支时，会自动把仓库静态内容发布到 `gh-pages` 分支。
+
+## 示例图像
+
+将 [`examples/image-metrics/reference.png`](examples/image-metrics/reference.png) 选为 Ground Truth，
+将同目录下的 `target-light.png`、`target-noisy.png` 和 `target-shifted.png` 选为 Target Images，
+即可比较噪声和位移对指标的影响。这些 512×320 的图案可自由用于本项目示例。
