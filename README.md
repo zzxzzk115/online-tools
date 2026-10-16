@@ -4,9 +4,9 @@
 
 ## 预览
 
-![本地运行的图像指标工具：批量评估三张自制测试图像。](docs/images/showcase.webp)
+![批量计算图像的 MSE、PSNR 和 SSIM。](docs/images/showcase.webp)
 
-本地运行的图像指标工具：批量评估三张自制测试图像。 [运行与截图说明](docs/showcase.md).
+批量计算图像的 MSE、PSNR 和 SSIM。
 
 ## 已实现工具
 
@@ -32,3 +32,9 @@
 ## 自动部署
 
 已配置 GitHub Actions：当你推送到 `main` 或 `master` 分支时，会自动把仓库静态内容发布到 `gh-pages` 分支。
+
+## 示例图像
+
+将 [`examples/image-metrics/reference.png`](examples/image-metrics/reference.png) 选为 Ground Truth，
+将同目录下的 `target-light.png`、`target-noisy.png` 和 `target-shifted.png` 选为 Target Images，
+即可比较噪声和位移对指标的影响。这些 512×320 的图案可自由用于本项目示例。
